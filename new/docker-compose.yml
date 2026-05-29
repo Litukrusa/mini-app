@@ -1,0 +1,26 @@
+# Compose внутри new/ — если в Dokploy Root Directory = new
+
+services:
+  dgtu-vk-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MINIAPP_ENABLED: "1"
+      MINIAPP_HOST: 0.0.0.0
+      MINIAPP_ALLOW_UNSIGNED: "0"
+    expose:
+      - "3000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import os,urllib.request; p=os.environ.get('MINIAPP_PORT') or os.environ.get('PORT','3000'); urllib.request.urlopen('http://127.0.0.1:%s/api/health'%p, timeout=3)",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Environment
+.env
+.env.local
+!.env.example
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+sessions.db
+
+# IDE
+.vscode/
+.idea/
+.qwen/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Mini App frontend
+new/miniapp/frontend/node_modules/
+new/miniapp/static/**/*.map

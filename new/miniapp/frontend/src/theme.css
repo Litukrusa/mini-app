@@ -1,0 +1,80 @@
+html,
+body,
+#root,
+.vkuiAppRoot {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+/* Недельная полоса дат */
+.week-strip {
+  display: flex;
+  gap: 4px;
+  padding: 8px 8px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid var(--vkui--color_separator_primary);
+  background: var(--vkui--color_background_content);
+}
+
+.week-day {
+  flex: 0 0 auto;
+  min-width: 44px;
+  padding: 6px 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  color: var(--vkui--color_text_secondary);
+  border-radius: 8px;
+}
+
+.week-day__dow {
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.week-day__num {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.week-day__mon {
+  display: block;
+  font-size: 11px;
+  line-height: 14px;
+  opacity: 0.75;
+}
+
+.week-day--active {
+  color: var(--vkui--color_text_positive);
+}
+
+.week-day--active .week-day__num {
+  color: var(--vkui--color_text_positive);
+}
+
+.week-day--active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 4px auto 0;
+  width: 28px;
+  background: var(--vkui--color_stroke_accent);
+  border-radius: 1px;
+}
+
+.lesson-time {
+  color: var(--vkui--color_text_secondary);
+  font-size: 14px;
+}
+
+.profile-segment {
+  margin-bottom: 8px;
+}
