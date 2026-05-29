@@ -1,0 +1,14 @@
+.git
+.env
+.env.*
+!.env.example
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+miniapp/frontend/node_modules
+new/miniapp/frontend/node_modules
+**/*.map
+new.zip
+.cursor
+agent-transcripts
+assets

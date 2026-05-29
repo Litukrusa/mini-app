@@ -24,8 +24,10 @@
 
 | Поле | Значение |
 |------|----------|
-| **Root Directory** (Build Path) | `new` |
-| **Dockerfile** | `Dockerfile` |
+| **Docker Context Path** | `new` |
+| **Docker File** | `Dockerfile` |
+
+Либо Context = `.` (корень репо) и Dockerfile из корня — см. `/Dockerfile`.
 
 4. **Environment** — из `.env.example`.
 5. **Ports** → `3000` (или ваш `PORT`).
